@@ -40,9 +40,14 @@ while (stage < stages.length){
 }
 
 while(winners.length > 1){
+    
+    console.log(` Tie detected for ${ winners.join(',') }`);
+
     let given = Array.from(Array(winners.length), () => deck.pick_a_card() % 13 + 1 )
     let min_val = Math.min(...given);
     let occurence = []
+
+    console.log(` Breaking tie with draw ${given.join(',')} with max card ${min_val}`)
 
     for(var i=0; i< given.length; i++) {
         if (given[i] == min_val) {
@@ -54,4 +59,11 @@ while(winners.length > 1){
 }
 
 let p = players[winners[0]]
-console.log(` ${p.name} has won. with hand ${p.hand.join(', ')}`);
+console.log(` ${p.name} has won. with hand ${p.hand.join(', ')} stage ${stages[stage] || 'tie break' } \n`);
+
+for( let i =0; i < players.length; i++) {
+
+    let tmp = players[i]
+    console.log(` ${tmp.name} hand ${tmp.hand.join(', ')}`);
+    
+}
