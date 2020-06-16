@@ -1,5 +1,5 @@
 const assert = require('assert')
-const Deck = require('../Deck')
+const Deck = require('../src/Deck')
 
 describe("Tests for Deck", () => {
 

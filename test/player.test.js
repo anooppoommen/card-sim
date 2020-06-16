@@ -1,6 +1,6 @@
 const assert = require('assert')
 
-const Player = require('../Player')
+const Player = require('../srv/Player')
 
 describe('Player test', () => {
 
@@ -43,7 +43,7 @@ describe('Player test', () => {
             p.give(6),
             p.give(2)
         ];
-        
+
         assert.deepEqual(a, [true, true, true, false, false])
     
     })
