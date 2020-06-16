@@ -1,5 +1,5 @@
-const Player = require('./Player')
-const Deck = require('./Deck')
+const Player = require('./src/Player')
+const Deck = require('./src/Deck')
 
 
 // create an array to store the players
