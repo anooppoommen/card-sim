@@ -1,6 +1,6 @@
 const assert = require('assert')
 
-const Player = require('../srv/Player')
+const Player = require('../src/Player')
 
 describe('Player test', () => {
 
